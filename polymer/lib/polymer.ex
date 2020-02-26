@@ -3,6 +3,14 @@ defmodule Polymer do
   Step 1
   """
   def combination_after_reactions(combination) do
+    test = combination |> String.graphemes |> Enum.count(fn(c) -> c == String.capitalize(c) end)
+    cond do
+      test == 0 ->
+        combination
+      test == 1 ->
+        ""
+    end
+
   end
 
   @doc """
